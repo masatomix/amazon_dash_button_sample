@@ -1,11 +1,13 @@
+const config = require('config');
+const adb = config.adb;
+
+console.log(adb.mac_address);
+console.log(adb.bot_url);
 const DashButton = require('dash-button');
-const DASH_BUTTON_MAC_ADDRESS = 'xx:xx:xxxxxxx';
-
-let button = new DashButton(DASH_BUTTON_MAC_ADDRESS);
-
+let button = new DashButton(adb.mac_address);
 
 const request = require('request');
-const url = ' https://hooks.slack.com/services/xxx/xxx'
+const url = 'https://hooks.slack.com/services' + adb.bot_url;
 const headers = {
     'Content-Type': 'application/json'
 }
@@ -17,6 +19,7 @@ const options = {
     json: {"text": "フルグラボタンが押されました！\nAnd this is another line of text."}
 }
 
+
 console.log('listen...');
 let subscription = button.addListener(() => {
     console.log('Clicked.. ' + new Date());
@@ -27,3 +30,4 @@ let subscription = button.addListener(() => {
         }
     });
 });
+

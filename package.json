@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "config": "^1.24.0",
     "dash-button": "^2.0.0",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "yaml": "^0.3.0"
   }
 }
