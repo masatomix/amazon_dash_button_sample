@@ -30,6 +30,8 @@ build/Release
 node_modules
 jspm_packages
 
+config/local.yaml
+
 # Optional npm cache directory
 .npm
 
