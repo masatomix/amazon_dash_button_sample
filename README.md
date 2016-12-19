@@ -6,3 +6,5 @@ config/local.yaml にMacアドレスと SlackのIncoming Webhooks のURLを記�
 sudo npm start
 
 すれば動くと思います。
+
+てすと
